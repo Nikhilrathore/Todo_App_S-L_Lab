@@ -1,0 +1,22 @@
+<body>
+    <h2>Enter Task Here</h2>
+    <input type="text" placeholder="Enter New Task" #task />
+    <br>
+    <br>
+    <button class="button1" (click)="addTask(task.value)">
+  Add New Task
+</button>
+    <br>
+    <br>
+    <ul *ngFor="let item of list">
+        <li>{{item.name}}
+            <button class="button2" (click)="removeTask(item.id)">Remove</button>
+        </li>
+    </ul>
+    <footer>
+        <h2>
+            Total Task = {{answer}}
+        </h2>
+
+    </footer>
+</body>
